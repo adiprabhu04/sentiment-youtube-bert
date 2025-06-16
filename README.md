@@ -1,7 +1,7 @@
 # 🎧 YouTube Comment Sentiment Analysis (with DeBERTa)
 
 Ever wondered what people *really* feel in the YouTube comment section?  
-...
+
 This project dives into that chaotic world and extracts **emotion** — one comment at a time.
 
 Using **Microsoft’s DeBERTa model**, this notebook classifies YouTube comments into **positive**, **negative**, or **neutral**. Built with 🤗 Transformers and some late-night coding hustle.
