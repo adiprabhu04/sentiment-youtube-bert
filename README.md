@@ -1,7 +1,3 @@
-You got it, boss 😎 — here’s your **full, final, paste-ready `README.md`** content. No instructions, no steps, just clean markdown for your repo:
-
----
-
 ````markdown
 # 🎧 YouTube Comment Sentiment Analysis (with DeBERTa)
 
