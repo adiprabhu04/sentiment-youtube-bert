@@ -1,99 +1,37 @@
-# 🎧 YouTube Comment Sentiment Analysis (with DeBERTa)
+# Uncovering Audience Insights: YouTube Comment Sentiment & Persona Analysis
 
-Ever wondered what people *really* feel in the YouTube comment section?  
+## 🚀 Project Overview
 
-This project dives into that chaotic world and extracts **emotion** — one comment at a time.
+This project implements an end-to-end Natural Language Processing (NLP) pipeline to analyze YouTube video comments. The primary goal is to perform fine-grained sentiment analysis and identify distinct audience personas based on their expressed sentiment and semantic content. This provides valuable insights for understanding audience reactions and for effective audience segmentation.
 
-Using **Microsoft’s DeBERTa model**, this notebook classifies YouTube comments into **positive**, **negative**, or **neutral**. Built with 🤗 Transformers and some late-night coding hustle.
+The project goes beyond basic sentiment classification to reveal *who* is engaging with content and *how* they feel.
 
----
+## ✨ What This Project Achieved
 
-## 📂 What’s Inside
+* **Comprehensive Data Pipeline**: Successfully developed and implemented a full pipeline for YouTube comment analysis, from data acquisition to insightful interpretation.
+* **Robust Data Preparation**: Achieved clean and high-quality textual data through a rigorous preprocessing phase that handles noise, ensures language consistency (English), and filters for meaningful content.
+* **Advanced Sentiment Classification**: Successfully fine-tuned **DeBERTa-v3-small**, a state-of-the-art transformer model, for multi-class sentiment classification, demonstrating the ability to leverage powerful pre-trained models and address data challenges like class imbalance with weighted loss.
+* **Meaningful Audience Segmentation**: Effectively identified and segmented the YouTube audience into distinct personas (e.g., "Critic," "Casual Viewer," "Superfan") by applying **K-Means clustering** to rich feature vectors derived from DeBERTa embeddings and weighted sentiment scores.
+* **Actionable Insights through Visualization**: Generated clear, interactive visualizations using Plotly to represent the discovered audience personas and their associated sentiment distributions, enabling intuitive understanding of audience characteristics.
+* **Practical Application**: Built a system capable of performing real-time sentiment prediction and persona assignment for new, unseen comments, showcasing immediate utility for content analysis.
 
-- `Sentiment-YT-DeBERTa.ipynb` — Main notebook for training/testing the model  
-- `cleaned_youtube_reviews.csv` — Preprocessed comment data with sentiment labels  
-- `README.md` — You’re looking at it
+## 🛠️ Technologies & Skills
 
----
+* **Programming Language**: Python
+* **NLP**: `nltk`, `langdetect`, `emoji`, `transformers` (Hugging Face)
+* **Machine Learning**: `scikit-learn` (Clustering, Model Evaluation)
+* **Deep Learning**: PyTorch (for DeBERTa model operations)
+* **Data Handling**: `pandas`, `numpy`
+* **Visualization**: `plotly`
+* **Performance**: `concurrent.futures` (Multithreading for efficient data processing)
 
-## 🛠️ Tech Stack
 
-- Python 🐍  
-- HuggingFace Transformers  
-- PyTorch  
-- Pandas  
-- scikit-learn
+## 🛣️ Future Directions
 
----
+This project lays a strong foundation for advanced audience understanding. Here are some ideas for future expansion:
 
-## 🚀 How to Run It
-
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/adiprabhu04/sentiment-youtube-bert.git
-   cd sentiment-youtube-bert
-````
-
-2. **Install the dependencies**
-
-   ```bash
-   pip install torch transformers pandas scikit-learn
-   ```
-
-3. **Launch the notebook**
-
-   * Open `Sentiment-YT-DeBERTa.ipynb` using Jupyter, VS Code, or [Google Colab](#)
-   * Run all cells
-
----
-
-## 🎯 What This Project Does
-
-* Cleans and tokenizes YouTube comments
-* Uses DeBERTa (a transformer model from Microsoft) to understand text
-* Trains a sentiment classifier
-* Evaluates performance using accuracy, precision, recall, and F1-score
-
----
-
-## 🤖 Why DeBERTa?
-
-Because it’s like BERT but smarter —
-Disentangled attention + better context understanding = 🔥 performance
-And let’s be real... the name just sounds cooler.
-
----
-
-## 📊 Example Results (WIP)
-
-You can fill this once training is done:
-
-* Accuracy: \~86.4%
-* F1 Score: \~0.88
-* Epochs: 4
-* Class balance: Handled via label distribution
-
----
-
-## 🌱 Future Plans
-
-* Add a web demo with Streamlit or Gradio
-* Upload model to Hugging Face Hub
-* Expand to multilingual comment support (Hindi, Hinglish, etc.)
-* Scrape real-time comments using YouTube API
-
----
-
-## 👨‍💻 Author
-
-Made by [Aditya Prabhudessai](https://github.com/adiprabhu04)
-Fueled by curiosity, chaos, and cold coffee ☕
-
----
-
-## ⭐ Like This?
-
-* Star the repo if it helped!
-* Fork it if you wanna build on it
-* Open an issue if you spotted a bug or have a feature idea
-* Or just vibe and check out the code 😎
+* **Integrate with a Web App**: Deploy the sentiment and persona models into a user-friendly web application (e.g., Streamlit, Flask, FastAPI) for live analysis of YouTube channels or specific videos.
+* **Dynamic Clustering**: Explore techniques to dynamically determine the optimal number of clusters rather than fixing it to 3.
+* **Time-Series Analysis**: Analyze how sentiment and persona distributions evolve over time, identifying trends or responses to specific content.
+* **Explainable AI (XAI)**: Implement tools like SHAP or LIME to understand *why* a specific comment is classified with a certain sentiment or assigned to a particular persona.
+* **Multi-Platform Analysis**: Extend the scraping capabilities to other social media platforms (e.g., X/Twitter, Reddit) to gather a more comprehensive view of public opinion.
